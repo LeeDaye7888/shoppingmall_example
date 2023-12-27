@@ -1,0 +1,41 @@
+server:
+  port: 8081 # or 8080
+spring:
+  # MySql 로 바꾸는 설정 알기
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop # Hibernate DDL
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  thymeleaf:
+    prefix: classpath:templates
+    suffix: .html
+    mode: HTML
+    cache: false
+    check-template-location: true
+
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+      hibernate:
+        type:
+          descriptor:
+            sql: trace
+
+jwt:
+  secret: DadFufN4Oui8Bfv3ScFj6R9fyJ9hD45E6AGFsXgFsRhT4asdfsdfYSdSb
