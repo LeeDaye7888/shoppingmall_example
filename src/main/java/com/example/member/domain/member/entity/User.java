@@ -1,6 +1,9 @@
 package com.example.member.domain.member.entity;
 
+import com.example.member.domain.BaseEntity;
 import com.example.member.domain.member.dto.MemberRequest;
+
+import com.example.member.domain.role.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +15,7 @@ import javax.persistence.*;
 @Getter
 @Entity
 @Table(name = "user")
-public class User extends BaseEntity{
+public class User extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
@@ -38,21 +41,21 @@ public class User extends BaseEntity{
 
     @Enumerated(EnumType.STRING)
     @Column(name = "is_vip", nullable = false)
-    private isVip isVip;
+    private com.example.member.domain.user.entity.VipState isVip;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "is_deleted", nullable = false)
-    private isDeleted isDeleted;
+    private com.example.member.domain.user.entity.DeletedState isDeleted;
 
     @Enumerated(EnumType.STRING)
     @OneToOne
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
 
-    public Member updateMember(MemberRequest request) {
-        this.username = request.username();
-        this.password = request.password();
-        return this;
-    }
+//    public User updateMember(MemberRequest request) {
+//        this.username = request.username();
+//        this.password = request.password();
+//        return this;
+//    }
 
 }

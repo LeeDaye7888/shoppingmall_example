@@ -35,7 +35,7 @@ public class Item extends BaseEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "is_sold_out", nullable = false)
-    private com.example.member.domain.item.entity.SoldOutState isSoldOut;
+    private SoldOutState isSoldOut;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)

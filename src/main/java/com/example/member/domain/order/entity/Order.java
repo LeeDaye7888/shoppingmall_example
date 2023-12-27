@@ -1,6 +1,8 @@
 package com.example.member.domain.order.entity;
 
 import com.example.member.domain.BaseEntity;
+import com.example.member.domain.member.entity.User;
+import com.example.member.domain.pay.entity.Pay;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

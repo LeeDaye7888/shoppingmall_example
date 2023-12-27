@@ -1,6 +1,7 @@
 package com.example.member.domain.itemImage.entity;
 
 import com.example.member.domain.BaseEntity;
+import com.example.member.domain.items.item.entity.Item;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,6 @@ public class ItemImage extends BaseEntity {
 
     @ManyToOne
     @JoinColumn(name = "item_id", nullable = false)
-    private Item itemId;
+    private Item item;
 
 }

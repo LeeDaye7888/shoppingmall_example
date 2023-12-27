@@ -1,6 +1,8 @@
 package com.example.member.domain.review.entity;
 
 import com.example.member.domain.BaseEntity;
+import com.example.member.domain.items.item.entity.Item;
+import com.example.member.domain.member.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
